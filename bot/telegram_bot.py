@@ -39,8 +39,7 @@ class ChatGPTTelegramBot:
         self.openai = openai
         bot_language = self.config['bot_language']
         self.commands = [
-            BotCommand(command='reset', description=localized_text('reset_description', bot_language)),
-            BotCommand(command='resend', description=localized_text('resend_description', bot_language))
+            
         ]
         # If imaging is enabled, add the "image" command to the list
         if self.config.get('enable_image_generation', False):
